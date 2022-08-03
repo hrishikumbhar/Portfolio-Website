@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --bg-dark: #111111;
+    --bg-dark-light: #181818;
+    --bg-dark-light-2: #1e1e1e;
+    --primary: #c91b28;
+    --primary-light: #f83241;
+    --white: #FFFFFF;
+    --text-gray: #cecece;
+}
+body {
+    background-color: var(--bg-dark);
+    font-family: "Montserrat", sans-serif;
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+/* Navbar Section */
+
+.navbar{
+
+
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.01);
+    backdrop-filter: blur(10px);
+    padding: 0 180px;
+    z-index: 4;
+}
+
+.navbar .logo {
+    font-size: 1.2rem;
+}
+
+.navbar .logo h4::first-letter {
+    color: var(--primary);
+}
+
+.navbar .logo h4 a {
+    color: #FFFFFF;
+    text-decoration: none;
+    position: relative;
+    z-index: 6;
+}
+
+.list {
+    display: flex;
+    list-style-type: none;
+    gap: 80px;
+}
+.list .list-item{
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+.list .list-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero .hero-left{
+    margin-top: -80px;
+    margin-left: -140px;
+}
+
+
+.hero .hero-left img{
+    width: 640px;
+}
+
+.hero .hero-right {
+    margin-top: 120px;
+}
+
+.hero .hero-right h4 {
+    color: var(--primary-light);
+    font-size: 1.4rem;
+}
+.hero .hero-right h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+.hero .hero-right p {
+    font-size: 1.2rem;
+    line-height: 22px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    
+}
+
+.hero .hero-right .prj-btn{
+    background-color: var(--primary);
+    border: none;
+    color: var(--white);
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 18px 40px;
+    margin-top: 60px;
+}
+
+.hero .box {
+    position: absolute;
+    background-color: var(--bg-dark-light);
+    width: 53rem;
+    height: 340px;
+    left: -200px;
+    top: 540px;
+    z-index: -1;
+    margin-top: 90px;
+}
+
+/* Service Section */
+
+.service-section {
+    margin-top: 300px;
+}
+
+.service-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.service-card .logo img{
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.service-stats .left {
+    flex: 1.2;
+    text-align: center;
+}
+
+.service-stats .left h1 {
+    color: var(--primary-light);
+    font-size: 5rem;
+    font-weight: 900;
+}
+.service-stats .left p {
+    font-size: 1.8rem;
+    margin-top: -10px;
+    font-weight: 600;
+}
+.service-stats .right {
+    display: flex;
+    gap: 20px;
+    flex: 2;
+    flex-wrap: wrap;
+}
+.service-stats .right .card {
+    background-color: var(--bg-dark-light-2);
+    width: 20rem;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.service-stats .right .card h1 {
+    color: var(--primary-light);
+    font-size: 2.6rem;
+}
+.service-stats .right .card p {
+    color: var(--text-gray);
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+/* Featured Projects */
+
+.feature-projects {
+    margin-top: 200px;
+}
+
+.feature-projects .project-headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    margin-bottom: 40px;
+}
+
+.feature-projects .project-headline h1{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.feature-projects .project-headline p{
+    padding-top: 14px;
+    color: var(--text-gray);
+    padding-bottom: 12px;
+}
+
+.feature-projects .project-headline button{
+    background-color: var(--primary-light);
+    color: var(--white);
+    padding: 14px 40px;
+    text-transform: uppercase;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.feature-projects .project-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 38px;
+    justify-content: center;
+}
+
+.feature-projects .project-cards .project-card {
+    background-color: var(--bg-dark-light-2);
+    width: 34rem;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.feature-projects .project-cards .project-card img{
+    width: 30rem;
+    padding-left: 30px;
+}
+
+.feature-projects .project-cards .project-card img:hover {
+    filter: brightness(20%);
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.feature-projects .project-cards .project-card h4{
+    padding:30px 0 20px 30px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.feature-projects .project-cards .project-card span{
+    color: var(--primary-light);
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-left: 120px;
+    padding-top: 30px;
+}
+
+.feature-projects .project-cards .project-card span a{
+    color: var(--primary-light);
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    background-color: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    /* border: 1px solid var(--primary-light);
+    padding: 10px; */
+}
+
+
+/*----------------------- footer nav --------------------------*/
+.footer-nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    padding: 0 80px;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.footer-wrapper {
+    position: absolute;
+    margin-top: 50px;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-dark-light-2);
+    height: 140px;
+    display: flex;
+    align-items: center;
+
+}
+.footer {
+    max-width: 80rem;
+    margin: 0 200px;
+}
+.footer img {
+    width: 100px;
+}
+.footer-wrapper .social-icons {
+    
+    margin-left: 600px;
+}
+.footer-wrapper .social-icons img:not(:last-child) {
+    margin-right: 40px;
+}
